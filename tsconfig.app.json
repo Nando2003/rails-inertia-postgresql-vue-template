@@ -25,7 +25,8 @@
     "paths": {
       "@/*": ["app/frontend/*"],
       "~/*": ["app/frontend/*"]
-    }
+    },
+    "ignoreDeprecations": "6.0"
   },
 
   "include": ["app/frontend/**/*.ts", "app/frontend/**/*.tsx", "app/frontend/**/*.vue"]

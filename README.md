@@ -1,24 +1,37 @@
-# README
+# rails-inertia-postgresql-vue-template
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+1. Clone the repository.
 
-Things you may want to cover:
+2. Install dependencies:
+```bash
+bundle install
+npm install
+```
 
-* Ruby version
+3. Edit `master.key` credentials:
+```bash
+EDITOR="nano" bin/rails credentials:edit
+# or
+bin/rails credentials:edit
+```
 
-* System dependencies
 
-* Configuration
+4. Run the container:
+```bash
+docker compose up --build
+```
 
-* Database creation
+5. Run database migrations:
+```bash
+docker compose exec app bin/rails db:migrate
+```
 
-* Database initialization
+6. Open the application in your browser:
+```
+http://localhost:3000
+```
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+7. To stop the container:
+```bash
+docker compose down
+```
