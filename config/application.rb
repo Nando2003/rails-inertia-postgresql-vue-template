@@ -18,7 +18,7 @@ require "rails/test_unit/railtie"
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
-module MyHairCut
+module MyProjectRails
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 8.1
@@ -41,5 +41,8 @@ module MyHairCut
 
     hosts = ENV.fetch("RAILS_HOSTS", "").split(",").map(&:strip)
     config.hosts.concat(hosts) if hosts.any?
+
+    config.i18n.default_locale = :'pt-BR'
+    config.i18n.available_locales = [:'pt-BR', :en]
   end
 end
