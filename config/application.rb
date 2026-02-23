@@ -18,7 +18,7 @@ require "rails/test_unit/railtie"
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
-module MyProjectRails
+module MyHairCut
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 8.1
@@ -38,5 +38,8 @@ module MyProjectRails
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+
+    hosts = ENV.fetch("RAILS_HOSTS", "").split(",").map(&:strip)
+    config.hosts.concat(hosts) if hosts.any?
   end
 end

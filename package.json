@@ -17,6 +17,7 @@
     "vue-tsc": "^3.2.5"
   },
   "scripts": {
-    "check": "vue-tsc -p tsconfig.app.json && tsc -p tsconfig.node.json"
+    "check": "vue-tsc -p tsconfig.app.json && tsc -p tsconfig.node.json",
+    "build": "vite build"
   }
 }

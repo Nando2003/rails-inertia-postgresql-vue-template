@@ -1,11 +1,13 @@
-class PasswordsController < ApplicationController
+class PasswordsController < InertiaController
   allow_unauthenticated_access
   before_action :set_user_by_token, only: %i[ edit update ]
 
   def new
+    render inertia: 'passwords/new'
   end
 
   def edit
+    render inertia: 'passwords/edit'
   end
 
   def update
