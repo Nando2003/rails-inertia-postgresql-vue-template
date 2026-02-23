@@ -2,8 +2,6 @@
 /.gitignore
 /.bundle
 /.env*
-/config/master.key
-/config/credentials/*.key
 /log/*
 /tmp/*
 !/log/.keep
